@@ -5,7 +5,7 @@ You tube url
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
 
 ## Development server [urlyuotube](https://www.youtube.com/watch?v=rAWlJMe_7rg)
-
+[lesson](https://www.youtube.com/watch?v=YJEnopFp8Ak&list=PL2bJ6t_D6_KSSiM2Y8T32-5KgaNzzS4R6&index=3)
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
