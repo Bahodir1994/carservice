@@ -1,3 +1,21 @@
 h1 {
   color: #495057;
 }
+
+.paginator-style {}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(25% - 20px); /* Вычисляем ширину для 4 карточек на строку с отступами */
+  margin: 10px;
+  background-color: #fff;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

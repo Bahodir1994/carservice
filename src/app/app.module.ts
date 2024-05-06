@@ -16,6 +16,11 @@ import { SettingsComponent } from './settings/settings.component';
 import { HeaderComponent } from './header/header.component';
 import { CdkMenuModule } from "@angular/cdk/menu";
 import { OverlayModule } from "@angular/cdk/overlay";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardImage} from "@angular/material/card";
+import {MatPaginator} from "@angular/material/paginator";
+import {HttpClientModule} from "@angular/common/http";
+import {MatButton} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -36,10 +41,19 @@ import { OverlayModule } from "@angular/cdk/overlay";
     BrowserAnimationsModule,
     AppRoutingModule,
     OverlayModule,
-    CdkMenuModule
+    CdkMenuModule,
+    MatCard,
+    MatCardContent,
+    MatPaginator,
+    HttpClientModule,
+    MatCardHeader,
+    MatCardActions,
+    MatButton,
+    MatCardImage
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
