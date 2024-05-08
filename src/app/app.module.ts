@@ -17,10 +17,12 @@ import { HeaderComponent } from './header/header.component';
 import { CdkMenuModule } from "@angular/cdk/menu";
 import { OverlayModule } from "@angular/cdk/overlay";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardImage} from "@angular/material/card";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 import {MatPaginator} from "@angular/material/paginator";
 import {HttpClientModule} from "@angular/common/http";
-import {MatButton} from "@angular/material/button";
+import {MatProgressBar} from "@angular/material/progress-bar";
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -42,14 +44,12 @@ import {MatButton} from "@angular/material/button";
     AppRoutingModule,
     OverlayModule,
     CdkMenuModule,
-    MatCard,
-    MatCardContent,
-    MatPaginator,
     HttpClientModule,
-    MatCardHeader,
-    MatCardActions,
-    MatButton,
-    MatCardImage
+    MatPaginator,
+    MatCardModule,
+    MatButtonModule,
+    MatProgressBar,
+    MatChipsModule
   ],
   providers: [
     provideClientHydration(),

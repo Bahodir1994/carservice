@@ -2,8 +2,6 @@ h1 {
   color: #495057;
 }
 
-.paginator-style {}
-
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -19,3 +17,13 @@ h1 {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
+
+.mat-card-image {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.primary {
+  color: blue;
+}
+

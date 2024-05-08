@@ -103,6 +103,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/theme-c001.scss"
+              },
               "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
