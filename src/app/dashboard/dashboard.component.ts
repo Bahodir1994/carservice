@@ -1,6 +1,5 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {dashboard_data_dto_v1, PaginatedDataResponse} from "./dashboard-data-dto";
-import {MatPaginator, PageEvent} from "@angular/material/paginator";
 import {DashboardDataService} from "./dashboard-data-service";
 
 @Component({

@@ -2,12 +2,12 @@ export const navbarData = [
   {
     routeLink: 'dashboard',
     icon: 'fal fa-home',
-    label: 'Dashboard'
+    label: 'Mening ustaxonam'
   },
   {
     routeLink: 'products',
     icon: 'fal fa-box-open',
-    label: 'Products'
+    label: 'Ustaxona mijozlari'
   },
   {
     routeLink: 'statistics',

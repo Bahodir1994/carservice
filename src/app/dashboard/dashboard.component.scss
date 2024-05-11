@@ -14,12 +14,12 @@ h1 {
 }
 
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url('../../assets/icons/car-brand/chevrolet.png');
   background-size: cover;
 }
 
 .mat-card-image {
-    padding: 30px;
+    padding: 60px;
     border-radius: 10px;
 }
 
@@ -27,3 +27,35 @@ h1 {
   color: blue;
 }
 
+.bg-royalblue {
+  background-color: royalblue;
+  color: white;
+}
+
+.png-bg {
+  border-radius: 10px;
+  margin: 15px;
+  background-color: #f2f2f3;
+}
+
+.mat-card-image {
+  /* Set the desired width and height */
+  width: 300px; /* Adjust the width as needed */
+  height: auto; /* Allow the height to adjust proportionally */
+}
+.custom-chip {
+  display: inline-flex;
+  color: black;
+  border-radius: 4px; /* Adjust border radius as needed */
+  vertical-align: middle;
+}
+
+h3 {
+  margin-left: 15px;
+  font-size: 30px;
+}
+
+.card-header-image_v1 {
+  background-image: url('../../assets/icons/car-brand/chevrolet.png');
+  background-size: cover;
+}

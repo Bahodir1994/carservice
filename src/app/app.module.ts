@@ -23,6 +23,7 @@ import {MatPaginator} from "@angular/material/paginator";
 import {HttpClientModule} from "@angular/common/http";
 import {MatProgressBar} from "@angular/material/progress-bar";
 import {MatChipsModule} from "@angular/material/chips";
+import {MatIcon} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {MatChipsModule} from "@angular/material/chips";
     MatCardModule,
     MatButtonModule,
     MatProgressBar,
-    MatChipsModule
+    MatChipsModule,
+    MatIcon
   ],
   providers: [
     provideClientHydration(),

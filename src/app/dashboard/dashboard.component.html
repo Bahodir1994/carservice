@@ -1,30 +1,84 @@
-<h1>Asosoiy oyna</h1>
+<div class="card-grid car-list">
+  <mat-card class="card bg-royalblue">
+    <mat-card-content>
+        <mat-card-title style="display: flex">
+          <div mat-card-avatar class="example-header-image"></div>
+          <span style="margin-left: 10px">Jami xizmat ko'rsatilgan</span>
+        </mat-card-title>
+        <h3>15 ta</h3>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card bg-royalblue">
+    <mat-card-content>
+      <mat-card-title>Xizmat ko'rsatish vaqti yaqinlashgan</mat-card-title>
+      <mat-card-subtitle>5 ta</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card bg-royalblue">
+    <mat-card-content>
+      <mat-card-title>Oxirgi 1 oy mobaynida</mat-card-title>
+      <mat-card-subtitle>5 ta</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card bg-royalblue">
+    <mat-card-content>
+      <mat-card-title>Jami ro'yxatdan o'tgan</mat-card-title>
+      <mat-card-subtitle>45 ta</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>
 
 <div class="card-grid car-list">
   <mat-card *ngFor="let item of data" class="card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-title>Akmalov Komil</mat-card-title>
       <mat-card-subtitle><span class="primary">{{ item.carNumber }}</span></mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image class="mat-card-image" src="https://627400.ru/wp-content/uploads/f/2/a/f2a7ce7dcf98c8978b97d752e0a814af.jpeg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <mat-chip-set aria-label="Fish selection">
-        <mat-chip class="custom-chip">ID: {{ item.id }}</mat-chip>
-        <mat-chip class="custom-chip">Car Number: {{ item.carNumber }}</mat-chip>
-        <mat-chip class="custom-chip">Created Date: {{ item.createdDate }}</mat-chip>
-        <mat-chip class="custom-chip">Car Model Code: {{ item.carModelCode }}</mat-chip>
-        <mat-chip class="custom-chip">Car Color: {{ item.carColor }}</mat-chip>
+    <div class="png-bg" style="display: flex; justify-content: center;">
+    <img mat-card-image style="width: 65%;" src="assets/icons/car-models/{{item.carModelCode}}.png" alt="Photo of a Shiba Inu">
+    </div>
+      <mat-card-content>
+      <mat-chip-set aria-label="Fish selection" style="margin-bottom: 20px">
+        <div style="display: flex">
+          <mat-chip style="background-color: #94a2bb">
+            ID: {{ item.id }}
+          </mat-chip>
+          <mat-chip style="background-color: #94a2bb">
+            Car Color:
+            {{ item.carColor }}
+          </mat-chip>
+        </div>
+        <div style="display: flex">
+          <mat-chip style="background-color: #94a2bb;">
+            <mat-icon class="custom-chip">calendar_today</mat-icon>
+            <span style="color: black; margin-left: 5px">{{ item.createdDate }}</span>
+          </mat-chip>
+          <mat-chip style="background-color: #94a2bb">
+            <mat-icon class="custom-chip">speed</mat-icon>
+            <span style="color: black; margin-left: 5px">{{ item.carModelCode }}</span>
+          </mat-chip>
+        </div>
       </mat-chip-set>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary">LIKE</button>
-      <button mat-button color="primary">SHARE</button>
-    </mat-card-actions>
     <mat-card-footer>
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
     </mat-card-footer>
   </mat-card>
+  <div *ngIf="data.length === 0" style="display: flex; justify-content: center;">
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-subtitle><span class="primary">?</span></mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image class="mat-card-image" src="https://627400.ru/wp-content/uploads/f/2/a/f2a7ce7dcf98c8978b97d752e0a814af.jpeg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <mat-chip-set aria-label="Fish selection">
+          <mat-chip class="custom-chip">Топилмади</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+      <mat-card-footer>
+      </mat-card-footer>
+    </mat-card>
+  </div>
 </div>
 
 <mat-paginator class="paginator-style"
