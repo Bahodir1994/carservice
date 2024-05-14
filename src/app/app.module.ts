@@ -24,6 +24,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatProgressBar} from "@angular/material/progress-bar";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatIcon} from "@angular/material/icon";
+import {DashboardDataService} from "./dashboard/dashboard-data-service";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import {MatIcon} from "@angular/material/icon";
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    DashboardDataService,
+    DashboardComponent
   ],
   bootstrap: [AppComponent]
 })

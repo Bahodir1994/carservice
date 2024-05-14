@@ -1,5 +1,7 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {languages, notifications, userItems} from './header-dummy-data';
+import {DashboardComponent} from "../dashboard/dashboard.component";
+
 
 @Component({
   selector: 'app-header',
@@ -18,7 +20,8 @@ export class HeaderComponent implements OnInit{
   notifications = notifications;
   userItems = userItems;
 
-  constructor() {}
+  constructor(private dashboardDataService: DashboardComponent) {}
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -36,5 +39,16 @@ export class HeaderComponent implements OnInit{
 
   checkCanShowSearchAsOverlay(innerWidth: number): void {
     this.canShowSearchAsOverlay = innerWidth < 845;
+  }
+
+  searchParam: string = '';
+  onSearchInputChange(event: Event): void {
+    const value = (event.target as HTMLInputElement).value; // Получаем значение поля ввода
+    console.log("Input changed:", value);
+
+    if (value.trim() !== '') {
+      this.searchParam = value;
+      console.log(111111)
+    }
   }
 }

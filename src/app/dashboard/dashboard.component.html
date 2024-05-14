@@ -1,33 +1,67 @@
-<div class="card-grid car-list">
-  <mat-card class="card bg-royalblue">
+<div class="row">
+  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v1">
     <mat-card-content>
-        <mat-card-title style="display: flex">
-          <div mat-card-avatar class="example-header-image"></div>
-          <span style="margin-left: 10px">Jami xizmat ko'rsatilgan</span>
+        <mat-card-title>
+          <div class="d-flex justify-content-between">
+            <img src="assets/icons/card-icon/card-matte.png" class="icon-styles" alt=""/>
+            <div class="justify-content-end">
+              <span class="text-warning">Jami xizmat ko'rsatilgan</span>
+              <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
+            </div>
+          </div>
         </mat-card-title>
-        <h3>15 ta</h3>
     </mat-card-content>
   </mat-card>
-  <mat-card class="card bg-royalblue">
+  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v2">
     <mat-card-content>
-      <mat-card-title>Xizmat ko'rsatish vaqti yaqinlashgan</mat-card-title>
-      <mat-card-subtitle>5 ta</mat-card-subtitle>
+      <mat-card-title>
+        <div class="d-flex justify-content-between">
+          <img src="assets/icons/card-icon/card-time.png" class="icon-styles" alt=""/>
+          <div class="justify-content-end">
+            <span class="text-warning">Vaqti yaqinlashgan</span>
+            <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
+          </div>
+        </div>
+      </mat-card-title>
     </mat-card-content>
   </mat-card>
-  <mat-card class="card bg-royalblue">
+  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v3">
     <mat-card-content>
-      <mat-card-title>Oxirgi 1 oy mobaynida</mat-card-title>
-      <mat-card-subtitle>5 ta</mat-card-subtitle>
+      <mat-card-title>
+        <div class="d-flex justify-content-between">
+          <img src="assets/icons/card-icon/card-month.png" class="icon-styles" alt=""/>
+          <div class="justify-content-end">
+            <span class="text-warning">Oxirgi 1 oy mobaynida</span>
+            <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
+          </div>
+        </div>
+      </mat-card-title>
     </mat-card-content>
   </mat-card>
-  <mat-card class="card bg-royalblue">
+  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v2">
     <mat-card-content>
-      <mat-card-title>Jami ro'yxatdan o'tgan</mat-card-title>
-      <mat-card-subtitle>45 ta</mat-card-subtitle>
+      <mat-card-title>
+        <div class="d-flex justify-content-between">
+          <img src="assets/icons/card-icon/card-loc.png" class="icon-styles" alt=""/>
+          <div class="justify-content-end">
+            <span class="text-warning">Jami ro'yxatdan o'tgan</span>
+            <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
+          </div>
+        </div>
+      </mat-card-title>
     </mat-card-content>
   </mat-card>
 </div>
 
+<div class="row col-12 w-100 d-flex justify-content-center">
+  <input type="search"
+         class="search form-control w-50" name=""
+         placeholder="Avtolarni filtr qilish, izlash"
+         id="searchInput"
+         matInput #searchInput
+         (keyup)="applyFilter($event)"
+  >
+</div>
 <div class="card-grid car-list">
   <mat-card *ngFor="let item of data" class="card">
     <mat-card-header>
@@ -64,20 +98,12 @@
     <mat-card-footer>
     </mat-card-footer>
   </mat-card>
-  <div *ngIf="data.length === 0" style="display: flex; justify-content: center;">
-    <mat-card class="card">
-      <mat-card-header>
-        <mat-card-subtitle><span class="primary">?</span></mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image class="mat-card-image" src="https://627400.ru/wp-content/uploads/f/2/a/f2a7ce7dcf98c8978b97d752e0a814af.jpeg" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <mat-chip-set aria-label="Fish selection">
-          <mat-chip class="custom-chip">Топилмади</mat-chip>
-        </mat-chip-set>
-      </mat-card-content>
-      <mat-card-footer>
-      </mat-card-footer>
-    </mat-card>
+  <div class="w-100" *ngIf="data.length === 0" style="display: flex; justify-content: center;">
+    <div class="card text-center w-100">
+      <div class="card-body">
+        <h1 class="h1 text-warning">Ma'lumotlar topilmadi</h1>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -85,6 +111,6 @@
   [length]="recordsTotal"
   [pageSize]="10"
   [pageSizeOptions]="[5, 10, 25, 100]"
-  (page)="onPageChange($event)">
+  (page)="onPageChange($event, searchInput.value)">
 </mat-paginator>
 

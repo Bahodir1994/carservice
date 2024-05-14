@@ -50,12 +50,51 @@ h1 {
   vertical-align: middle;
 }
 
-h3 {
-  margin-left: 15px;
-  font-size: 30px;
+.card-header-image_v1 {
+  background-image: url('../../assets/icons/card-icon/img_v1.png');
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.card-header-image_v1 {
-  background-image: url('../../assets/icons/car-brand/chevrolet.png');
+.card-header-image_v2 {
+  background-image: url('../../assets/icons/card-icon/img_v2.jpg');
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
+}
+
+.card-header-image_v3 {
+  background-image: url('../../assets/icons/card-icon/img_v3.jpg');
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.card-header-image_v4 {
+  background-image: url('../../assets/icons/card-icon/img_v3.jpg');
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+
+.icon-styles {
+  width: auto;
+  height: 80px;
+}
+
+.bg-img-content {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity .2s ease-out;
 }

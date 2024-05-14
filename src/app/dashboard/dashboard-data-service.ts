@@ -12,13 +12,14 @@ export class DashboardDataService {
   constructor(private http: HttpClient) {
   }
 
-  getPaginatedData(page: number, size: number): Observable<PaginatedDataResponse> {
-    return this.http.get<any>(`http://192.168.224.18:8080/list_cars?page=${page}&size=${size}`)
+  getPaginatedData(page: number, size: number, param: string): Observable<PaginatedDataResponse> {
+    console.log(param)
+    return this.http.get<any>(`http://192.168.224.18:8080/list_cars?page=${page}&size=${size}&searchparam=${param}`)
       .pipe(
         map(response => ({
-          data: response.data,
-          recordsTotal: response.recordsTotal,
-          currentPage: response.currentPage
+          data: response.content,
+          totalElements: response.totalElements,
+          pageable: response.pageable
         }))
       );
   }
