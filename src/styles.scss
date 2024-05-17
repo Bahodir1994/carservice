@@ -4,6 +4,7 @@
 @import '@angular/cdk/overlay-prebuilt.css';
 @import "bootstrap/dist/css/bootstrap.css";
 
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,9 @@ body {
   font-family: 'Roboto', sans-serif;
   background: #f4f7fa;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

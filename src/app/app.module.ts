@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -9,10 +9,6 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductsComponent } from './products/products.component';
 import { StatisticsComponent } from './statistics/statistics.component';
-import { CoupensComponent } from './coupens/coupens.component';
-import { PagesComponent } from './pages/pages.component';
-import { MediaComponent } from './media/media.component';
-import { SettingsComponent } from './settings/settings.component';
 import { HeaderComponent } from './header/header.component';
 import { CdkMenuModule } from "@angular/cdk/menu";
 import { OverlayModule } from "@angular/cdk/overlay";
@@ -23,8 +19,17 @@ import {MatPaginator} from "@angular/material/paginator";
 import {HttpClientModule} from "@angular/common/http";
 import {MatProgressBar} from "@angular/material/progress-bar";
 import {MatChipsModule} from "@angular/material/chips";
-import {MatIcon} from "@angular/material/icon";
+import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {DashboardDataService} from "./dashboard/dashboard-data-service";
+import { LoginComponent } from './login/login.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatTableModule} from "@angular/material/table";
+import {MatSelectModule} from "@angular/material/select";
+import {MatListModule} from "@angular/material/list";
+import {MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -34,11 +39,8 @@ import {DashboardDataService} from "./dashboard/dashboard-data-service";
     DashboardComponent,
     ProductsComponent,
     StatisticsComponent,
-    CoupensComponent,
-    PagesComponent,
-    MediaComponent,
-    SettingsComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -52,13 +54,15 @@ import {DashboardDataService} from "./dashboard/dashboard-data-service";
     MatButtonModule,
     MatProgressBar,
     MatChipsModule,
-    MatIcon
+    MatIcon,
+    MatInputModule, MatIconModule, MatRadioModule, MatTableModule, MatListModule, MatDividerModule,
+    ReactiveFormsModule, MatFormFieldModule, MatSelectModule, FormsModule
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
     DashboardDataService,
-    DashboardComponent
+    DashboardComponent,
   ],
   bootstrap: [AppComponent]
 })

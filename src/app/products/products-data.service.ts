@@ -1,13 +1,13 @@
-import {Injectable} from "@angular/core";
+import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import { map } from 'rxjs/operators';
-import {PaginatedDataResponse} from "./dashboard-data-dto";
+import {PaginatedDataResponse} from "./products-data-dto";
+import {map} from "rxjs/operators";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
-export class DashboardDataService {
+export class ProductsDataService {
 
   constructor(private http: HttpClient) {
   }
@@ -20,7 +20,7 @@ export class DashboardDataService {
       'Authorization': `Bearer ${accessToken}`
     });
 
-    return this.http.get<any>(`http://192.168.224.18:8761/dashboard?page=${page}&size=${size}&searchparam=${param}`, { headers })
+    return this.http.get<any>(`http://192.168.224.18:8761/products?page=${page}&size=${size}&searchparam=${param}`, { headers })
       .pipe(
         map(response => ({
           data: response.content,
@@ -29,4 +29,7 @@ export class DashboardDataService {
         }))
       );
   }
+
+
+
 }

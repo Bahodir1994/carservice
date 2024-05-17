@@ -1,59 +1,43 @@
-<div class="row">
-  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v1">
-    <mat-card-content>
-        <mat-card-title>
-          <div class="d-flex justify-content-between">
-            <img src="assets/icons/card-icon/card-matte.png" class="icon-styles" alt=""/>
-            <div class="justify-content-end">
-              <span class="text-warning">Jami xizmat ko'rsatilgan</span>
-              <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
-            </div>
-          </div>
-        </mat-card-title>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v2">
-    <mat-card-content>
-      <mat-card-title>
-        <div class="d-flex justify-content-between">
-          <img src="assets/icons/card-icon/card-time.png" class="icon-styles" alt=""/>
-          <div class="justify-content-end">
-            <span class="text-warning">Vaqti yaqinlashgan</span>
-            <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
-          </div>
-        </div>
-      </mat-card-title>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v3">
-    <mat-card-content>
-      <mat-card-title>
-        <div class="d-flex justify-content-between">
-          <img src="assets/icons/card-icon/card-month.png" class="icon-styles" alt=""/>
-          <div class="justify-content-end">
-            <span class="text-warning">Oxirgi 1 oy mobaynida</span>
-            <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
-          </div>
-        </div>
-      </mat-card-title>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="card col-md-3 col-sm-6 shadow-lg rounded border border-warning card-header-image_v2">
-    <mat-card-content>
-      <mat-card-title>
-        <div class="d-flex justify-content-between">
-          <img src="assets/icons/card-icon/card-loc.png" class="icon-styles" alt=""/>
-          <div class="justify-content-end">
-            <span class="text-warning">Jami ro'yxatdan o'tgan</span>
-            <mat-card-subtitle class="text-end mt-0 pt-0"><span class="h2 text-warning">5 ta</span></mat-card-subtitle>
-          </div>
-        </div>
-      </mat-card-title>
-    </mat-card-content>
-  </mat-card>
-</div>
 
-<div class="row col-12 w-100 d-flex justify-content-center">
+  <div class="row col-12">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card-option">
+        <div class="container-card bg-green-box d-flex justify-content-between">
+          <p class="card-title">Jami xizmat ko'rsatilgan</p>
+          <img src="assets/icons/card-icon/up.png" class="icon-styles">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card-option col-lg-6 col-md-3 col-sm-3">
+        <div class="container-card bg-white-box d-flex justify-content-between">
+          <p class="card-title">Vaqti yaqinlashgan</p>
+          <img src="assets/icons/card-icon/pie-chart.png" class="icon-styles">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card-option col-lg-6 col-md-3 col-sm-3">
+        <div class="container-card bg-yellow-box d-flex justify-content-between">
+          <p class="card-title">Oxirgi 1 oy mobaynida</p>
+          <img src="assets/icons/card-icon/pyramid.png" class="icon-styles">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card-option col-lg-6 col-md-3 col-sm-3">
+        <div class="container-card bg-blue-box d-flex justify-content-between">
+          <p class="card-title">Jami ro'yxatdan o'tgan</p>
+          <img src="assets/icons/card-icon/profit.png" class="icon-styles">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="row col-12 w-100 mt-3 d-flex justify-content-center">
   <input type="search"
          class="search form-control w-50" name=""
          placeholder="Avtolarni filtr qilish, izlash"
@@ -75,20 +59,20 @@
       <mat-card-content>
       <mat-chip-set aria-label="Fish selection" style="margin-bottom: 20px">
         <div style="display: flex">
-          <mat-chip style="background-color: #94a2bb">
+          <mat-chip>
             ID: {{ item.id }}
           </mat-chip>
-          <mat-chip style="background-color: #94a2bb">
+          <mat-chip>
             Car Color:
             {{ item.carColor }}
           </mat-chip>
         </div>
         <div style="display: flex">
-          <mat-chip style="background-color: #94a2bb;">
+          <mat-chip>
             <mat-icon class="custom-chip">calendar_today</mat-icon>
             <span style="color: black; margin-left: 5px">{{ item.createdDate }}</span>
           </mat-chip>
-          <mat-chip style="background-color: #94a2bb">
+          <mat-chip>
             <mat-icon class="custom-chip">speed</mat-icon>
             <span style="color: black; margin-left: 5px">{{ item.carModelCode }}</span>
           </mat-chip>
